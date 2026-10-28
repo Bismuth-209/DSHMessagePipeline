@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Message Pipeline",
+    "description": "Connect workspaces into named pipelines for scoped cross-session messaging."
+  }
+}

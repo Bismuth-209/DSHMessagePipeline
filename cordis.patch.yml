@@ -1,0 +1,17 @@
+# Message Pipeline bundle: one host service that owns the pipeline graph,
+# the cross-session outbox, the model tools, and the /pipe management command.
+# The client half adds the sidebar panel and the per-session reachability chip.
+
+- insert:
+    - id: message-pipeline
+      name: 'dsh-message-pipeline'
+      config:
+        defaultWake: false
+        maxMessageBytes: 32768
+        maxQueuedPerTarget: 32
+        maxSendsPerMinute: 20
+        maxAttempts: 3
+        auditRetentionDays: 30
+        auditMaxRecords: 2000
+        promptHint: true
+        deliveryTimeoutMs: 15000
